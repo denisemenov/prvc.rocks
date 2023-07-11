@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
@@ -11,6 +12,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sass-bulk-importer": "^3.0.2",
     "gulp-sourcemaps": "^3.0.0",
+    "normalize.css": "^8.0.1",
     "sass": "^1.63.6"
   }
 }
