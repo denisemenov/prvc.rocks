@@ -1,0 +1,29 @@
+.manual {
+  ol {
+    list-style: manual;
+    padding-left: 1.2rem;
+    margin-top: 0.2rem;
+  }
+  p {
+    margin-bottom: 0.4rem;
+  }
+}
+
+.deleted {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  right: -50px;
+  top: 0;
+  width: auto;
+  margin: 0.8rem;
+  position: fixed;
+  padding-right: 0.8rem;
+  transition: all 0.2s ease-in-out;
+
+  &--show {
+    visibility: visible;
+    opacity: 1;
+    right: 0;
+  }
+}

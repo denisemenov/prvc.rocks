@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: $light-color;
+  color: $body-font-color;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 800px;
+  padding: 0.8rem;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.4rem;
+  margin-right: -0.4rem;
+  padding: 0.8rem;
+  border: 1px solid $primary-color;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 1rem rgba(48, 55, 66, 0.15);
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}

@@ -1,0 +1,43 @@
+<div id="manual" class="manual">
+  <h5>📖 Инструкция</h5>
+
+  <ol>
+    <li>
+      Скачай и установи приложение OpenVPN для
+      <a
+        href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Android</a
+      >,
+      <a href="https://apps.apple.com/us/app/openvpn-connect/id590379981" target="_blank" rel="noopener noreferrer"
+        >iOS</a
+      >
+      или
+      <a href="https://openvpn.net/client/" target="_blank" rel="noopener noreferrer"
+        >любой другой операционной системы</a
+      >.
+    </li>
+    <li>
+      <p>
+        Скачай файл конфигурации .ovpn, нажав ниже на кнопочку Download Profile (или, если очень надо, то вот архив с
+        этим файлом в
+        <a href="<%= user_key_zip_url %>">.zip </a> или <a href="<%= user_key_tar_url %>"> .tar </a>).
+      </p>
+
+      <%= conf_links %>
+      <!-- <a class="btn btn-sm download-profile" title="Download Profile" href="/key/uhpxwIDryzSlb8SZvIVjm8iFfqFAtaDb/63e14fa7f6e74a8c1b550d52.key">Download Profile (russia)</a>  -->
+
+      <div id="deleted" class="toast toast-primary deleted"> 🗑️ Ссылка для скачивания удалена </div>
+    </li>
+    <li>
+      Открой приложение OpenVPN на своём гаджете. Если на экране есть оранжевая кнопочка с плюсиком, то жми на неё. Если
+      есть окно Import Profile, то нажми на вкладку Upload File, затем на кнопку Browse. Затем добавь скачанный на
+      предыдущем шаге файл с конфигурацией VPN.
+    </li>
+    <li
+      >Теперь каждый раз, когда тебе нужен безопасный выход в интернет в обход цензуры, то включай VPN в этом
+      приложении.
+    </li>
+  </ol>
+</div>

@@ -1,0 +1,7 @@
+// /usr/lib/pritunl/usr/lib/python3.9/site-packages/pritunl/handlers   
+
+// errors.py - 22
+    return open('/usr/share/pritunl/www/404.html'), 404
+
+// key.py - 503    
+    key_page = key_page.replace('<%= user_name %>', usr.name)

@@ -1,0 +1,38 @@
+.header {
+  margin-top: -0.8rem;
+  margin-bottom: -0.8rem;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  line-height: 1.6rem;
+  height: 3.2rem;
+  width: 100%;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: calc(100% + 1.6rem);
+    left: -0.8rem;
+    top: 1.6rem;
+    border-bottom: 1px solid $primary-color;
+    background: $primary-color;
+  }
+
+  h1 {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    height: 1.6rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn {
+    &__delete {
+      background-color: #fff;
+      border: none;
+      height: 1.6rem;
+      cursor: pointer;
+    }
+  }
+}

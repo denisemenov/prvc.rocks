@@ -1,0 +1,184 @@
+@counter-style important {
+  system: cyclic;
+  symbols: '❗';
+  suffix: ' ';
+}
+
+@counter-style manual {
+  system: cyclic;
+  symbols: '📱' '🛡️' '🔎' '🕹️';
+  suffix: ' ';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+h5 {
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+h6 {
+  font-size: 0.8rem;
+}
+
+p {
+  margin: 0 0 1.2rem;
+}
+
+a {
+  color: $link-color;
+  outline: none;
+  text-decoration: none;
+  text-decoration-skip: ink edges;
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba($primary-color, 0.2);
+  }
+
+  &:focus,
+  &:hover,
+  &:active,
+  &.active {
+    color: $link-color-dark;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $link-color-light;
+  }
+}
+
+ul,
+ol {
+  margin: 0.8rem 0 0.8rem 0.8rem;
+  padding: 0;
+
+  li {
+    margin-top: 0.4rem;
+  }
+}
+
+// Icons
+.icon {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: inherit;
+  font-style: normal;
+  height: 1em;
+  position: relative;
+  text-indent: -9999px;
+  vertical-align: middle;
+  width: 1em;
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Icon copy
+.icon-copy {
+  color: $primary-color;
+  &::before {
+    border: 0.1rem solid currentColor;
+    border-radius: 0.1rem;
+    border-right: 0;
+    border-bottom: 0;
+    height: 0.8em;
+    left: 40%;
+    top: 35%;
+    width: 0.8em; 
+  }
+  &::after {
+    border: 0.1rem solid currentColor;
+    border-radius: 0.1rem;
+    height: 0.8em;
+    left: 60%;
+    top: 60%;
+    width: 0.8em; 
+  }
+}
+
+// Icon delete
+.icon-delete {
+  color: $primary-color;
+  &::before {
+    border: 0.1rem solid currentColor;
+    border-bottom-left-radius: 0.1rem;
+    border-bottom-right-radius: 0.1rem;
+    border-top: 0;
+    height: 0.75em;
+    top: 60%;
+    width: 0.75em;
+  }
+  &::after {
+    background: currentColor;
+    box-shadow: -0.25em 0.2em, 0.25em 0.2em;
+    height: 0.1rem;
+    top: 0;
+    width: 0.5em;
+  }
+}
+
+// Toasts
+.toast {
+  background: rgba($dark-color, 0.95);
+  border: 0.05rem solid $dark-color;
+  border-color: $dark-color;
+  border-radius: 0.1rem;
+  color: white;
+  display: block;
+  padding: 0.4rem;
+  width: 100%;
+}
+.toast.toast-primary {
+  background: rgba(87, 85, 217, 0.95);
+  border-color: #5755d9;
+}
+.toast a {
+  color: #fff;
+  text-decoration: underline;
+}
+.toast a.active,
+.toast a:active,
+.toast a:focus,
+.toast a:hover {
+  opacity: 0.75;
+}
+.toast .btn-clear {
+  margin: 0.1rem;
+}
+.toast p:last-child {
+  margin-bottom: 0;
+}
+.toast .icon {
+  vertical-align: -10%;
+}
