@@ -60,7 +60,7 @@ function build_index(cb) {
       })
     )
     .pipe(rename('index.html'))
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('./'));
 }
 
 function build_download(cb) {
