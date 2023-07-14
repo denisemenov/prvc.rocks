@@ -22,6 +22,7 @@ check_version() {
         # Сравнение текущей и предыдущей версий
         if [ "$current_version" != "$previous_version" ]; then
             echo "Версия программы Pritunl изменилась. Текущая версия: $current_version"
+            echo "$current_version" > "$PREVIOUS_VERSION_FILE"
             # Вставьте сюда команды, которые нужно выполнить при изменении версии
             copy_file
         else
