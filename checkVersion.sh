@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Файл, в котором будет храниться предыдущая версия программы Pritunl
-PREVIOUS_VERSION_FILE="./previous_version.txt"
+PREVIOUS_VERSION_FILE="/home/den/web/prvc.rocks/previous_version.txt"
 
 # Директория, из которой нужно скопировать файл при изменении версии
-SOURCE_DIR="./dist"
+SOURCE_DIR="/home/den/web/prvc.rocks/dist"
 
 # Директория, в которую нужно скопировать файл при изменении версии или отсутствии предыдущей версии
 DESTINATION_DIR="/usr/share/pritunl/www/"
