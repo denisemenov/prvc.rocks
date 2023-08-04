@@ -25,6 +25,9 @@ check_version() {
             echo "$current_version" > "$PREVIOUS_VERSION_FILE"
             # Вставьте сюда команды, которые нужно выполнить при изменении версии
             copy_file
+            replace_string_404
+            replace_string_key
+            systemctl restart pritunl
         else
             echo "Версия программы Pritunl не изменилась."
             # Вставьте сюда команды, которые нужно выполнить, если версия не изменилась
@@ -34,6 +37,9 @@ check_version() {
         echo "Предыдущая версия не найдена. Записана текущая версия: $current_version"
         # Вставьте сюда команды, которые нужно выполнить при первом запуске скрипта
         copy_file
+        replace_string_404
+        replace_string_key
+        systemctl restart pritunl
     fi
 }
 
