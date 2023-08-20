@@ -1,21 +1,26 @@
-.donate {
-  position: relative;
-  max-width: 100%;
-
-  .cryptos {
-    list-style: none;
-    line-height: 24px;
-    margin-left: 0;
+.reality {
+  ol {
+    list-style: reality;
+    padding-left: 1.2rem;
+    margin-top: 0.2rem;
+    li {
+      padding-bottom: 0.6rem;
+    }
+    ol {
+      list-style: subreality;
+      padding-left: 1.2rem;
+      margin-top: 0.2rem;
+      li {
+        padding: 0.1rem;
+      }
+    }
+  }
+  p {
+    margin-bottom: 0.4rem;
   }
 
-  .crypto {
+  .subscription {
     position: relative;
-    line-height: 24px;
-    align-items: center;
-    margin: 0 16px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
 
     &__icon {
       min-width: 20px;
@@ -26,15 +31,25 @@
       right: -4px;
     }
 
-    &__number {
+    &__link {
       min-width: 0;
       display: inline-block;
       cursor: pointer;
       position: relative;
-      margin-left: 8px;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+
+      #subscriptionLink {
+        min-width: 0;
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: calc(100vw - 146px);
+      }
 
       .btn {
         display: block;
@@ -88,38 +103,32 @@
       right: 0;
     }
   }
-}
 
-// Chips
-.chip {
-  align-items: center;
-  background: $bg-color-dark;
-  border-radius: 5rem;
-  display: inline-flex;
-  font-size: 90%;
-  height: 1.2rem;
-  line-height: 0.8rem;
-  margin: 0.1rem;
-  max-width: 360px;
-  overflow: hidden;
-  padding: 0.2rem 0.4rem;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  vertical-align: middle;
-  white-space: nowrap;
+  // Chips
+  .chip {
+    align-items: center;
+    background: $bg-color-dark;
+    border-radius: 5rem;
+    display: inline-flex;
+    font-size: 90%;
+    height: 1.2rem;
+    line-height: 0.8rem;
+    margin: 0.1rem;
+    overflow: hidden;
+    padding: 0.2rem 0.4rem;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
 
-  &.active {
-    background: $primary-color;
-    color: $light-color;
-  }
+    &.active {
+      background: $primary-color;
+      color: $light-color;
+    }
 
-  .avatar {
-    margin-left: -0.4rem;
-    margin-right: 0.2rem;
-  }
-
-  .btn-clear {
-    border-radius: 50%;
-    transform: scale(0.75);
+    .avatar {
+      margin-left: -0.4rem;
+      margin-right: 0.2rem;
+    }
   }
 }

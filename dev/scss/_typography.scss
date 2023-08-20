@@ -10,6 +10,18 @@
   suffix: ' ';
 }
 
+@counter-style reality {
+  system: cyclic;
+  symbols: '📱' '💌' '🔗' '🕹️' '🎉' '🪃' '🩹';
+  suffix: ' ';
+}
+
+@counter-style subreality {
+  system: cyclic;
+  symbols: '🤖' '🍎';
+  suffix: ' ';
+}
+
 h1,
 h2,
 h3,
@@ -115,7 +127,7 @@ ol {
     height: 0.8em;
     left: 40%;
     top: 35%;
-    width: 0.8em; 
+    width: 0.8em;
   }
   &::after {
     border: 0.1rem solid currentColor;
@@ -123,7 +135,7 @@ ol {
     height: 0.8em;
     left: 60%;
     top: 60%;
-    width: 0.8em; 
+    width: 0.8em;
   }
 }
 

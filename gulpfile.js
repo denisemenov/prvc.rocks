@@ -115,10 +115,40 @@ function build_404(cb) {
     .pipe(gulp.dest('dist/'));
 }
 
-function watch() {
-  return gulp.watch('./dev/**', gulp.series(style, script, gulp.parallel(build_index, build_download, build_404)));
+function build_reality(cb) {
+  return gulp
+    .src('./dev/index.html')
+    .pipe(replace('<style></style>', '<style>' + fs.readFileSync('./dist/styles.css', 'utf8') + '</style>'))
+    .pipe(replace('<header></header>', fs.readFileSync('./dev/components/header_index.html', 'utf8')))
+    .pipe(replace('<hola></hola>', fs.readFileSync('./dev/components/hola_reality.html', 'utf8')))
+    .pipe(replace('<reality></reality>', fs.readFileSync('./dev/components/reality.html', 'utf8')))
+    .pipe(replace('<about></about>', fs.readFileSync('./dev/components/about.html', 'utf8')))
+    .pipe(replace('<important></important>', fs.readFileSync('./dev/components/important.html', 'utf8')))
+    .pipe(replace('<manual></manual>', fs.readFileSync('./dev/components/manual_reality.html', 'utf8')))
+    .pipe(replace('<donate></donate>', fs.readFileSync('./dev/components/donate.html', 'utf8')))
+    .pipe(replace('<script></script>', '<script>' + fs.readFileSync('./dist/script.js', 'utf8') + '</script>'))
+    .pipe(
+      htmlMin({
+        caseSensitive: true,
+        collapseWhitespace: true,
+        minifyCSS: true,
+        minifyJS: true,
+        removeComments: true,
+        sortAttributes: true,
+        sortClassName: true,
+      })
+    )
+    .pipe(rename('reality.html'))
+    .pipe(gulp.dest('./'));
 }
 
-exports.build = gulp.series(style, script, gulp.parallel(build_index, build_download, build_404));
+function watch() {
+  return gulp.watch(
+    './dev/**',
+    gulp.series(style, script, gulp.parallel(build_index, build_download, build_404, build_reality))
+  );
+}
+
+exports.build = gulp.series(style, script, gulp.parallel(build_index, build_download, build_404, build_reality));
 exports.clean = clean;
 exports.default = watch;
